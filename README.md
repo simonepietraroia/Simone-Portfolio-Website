@@ -109,8 +109,5 @@ https://github.com/simonepietraroia
 LinkedIn  
 https://www.linkedin.com/in/simone-pietraroia-358231236/
 
----
 
-# License
 
-This project is open source and available under the MIT License.
