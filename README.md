@@ -1,9 +1,3 @@
----
-title: "Simone Pietraroia Portfolio"
-author: "Simone Pietraroia"
-output: github_document
----
-
 # Simone Pietraroia Portfolio
 
 ## Overview
