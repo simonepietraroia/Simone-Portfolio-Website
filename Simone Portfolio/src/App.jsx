@@ -1,4 +1,5 @@
 import "./App.css";
+import simoneCv from "./assets/simone-cv.pdf";
 import { motion } from "framer-motion";
 import {
   BookOpen,
@@ -157,91 +158,46 @@ function CountUpNumber({ end, duration = 1600, suffix = "", className = "" }) {
 
 function AnimatedBackground() {
   const dots = [
-    {
-      size: 220,
-      left: "5%",
-      top: "10%",
-      duration: 20,
-      delay: 0,
-      x: [0, 40, -20, 0],
-      y: [0, -25, 20, 0],
-    },
-    {
-      size: 180,
-      left: "18%",
-      top: "70%",
-      duration: 24,
-      delay: 1,
-      x: [0, -25, 30, 0],
-      y: [0, 20, -20, 0],
-    },
-    {
-      size: 260,
-      left: "75%",
-      top: "15%",
-      duration: 26,
-      delay: 2,
-      x: [0, 25, -35, 0],
-      y: [0, 30, -20, 0],
-    },
-    {
-      size: 200,
-      left: "82%",
-      top: "72%",
-      duration: 22,
-      delay: 0.5,
-      x: [0, -30, 15, 0],
-      y: [0, -18, 25, 0],
-    },
-    {
-      size: 160,
-      left: "45%",
-      top: "18%",
-      duration: 18,
-      delay: 1.5,
-      x: [0, 20, -15, 0],
-      y: [0, 15, -10, 0],
-    },
-    {
-      size: 240,
-      left: "55%",
-      top: "55%",
-      duration: 28,
-      delay: 0.7,
-      x: [0, -35, 18, 0],
-      y: [0, 22, -18, 0],
-    },
-    {
-      size: 130,
-      left: "30%",
-      top: "45%",
-      duration: 16,
-      delay: 0.2,
-      x: [0, 15, -10, 0],
-      y: [0, -12, 10, 0],
-    },
-    {
-      size: 140,
-      left: "68%",
-      top: "38%",
-      duration: 21,
-      delay: 1.8,
-      x: [0, 18, -12, 0],
-      y: [0, -14, 16, 0],
-    },
-  ];
-
-  const tinyDots = [
-    { left: "12%", top: "25%", duration: 5.5, delay: 0.2 },
-    { left: "22%", top: "55%", duration: 6.2, delay: 1.4 },
-    { left: "38%", top: "30%", duration: 4.8, delay: 0.6 },
-    { left: "58%", top: "18%", duration: 5.8, delay: 1.9 },
-    { left: "66%", top: "64%", duration: 6.6, delay: 0.8 },
-    { left: "82%", top: "46%", duration: 5.2, delay: 2.1 },
-    { left: "92%", top: "76%", duration: 6.8, delay: 1.1 },
-    { left: "8%", top: "72%", duration: 5.1, delay: 2.4 },
-    { left: "48%", top: "82%", duration: 6, delay: 0.4 },
-    { left: "74%", top: "88%", duration: 5.6, delay: 1.7 },
+    { left: "5%",  top: "5%",  duration: 22, delay: 0,   x: [0, 280, 120, -150, 0], y: [0, 180, -200, 120, 0] },
+    { left: "15%", top: "80%", duration: 28, delay: 1,   x: [0, 220, -180, 130, 0], y: [0, -280, 120, -180, 0] },
+    { left: "30%", top: "20%", duration: 20, delay: 2,   x: [0, -160, 240, -110, 0], y: [0, 160, 220, -130, 0] },
+    { left: "50%", top: "60%", duration: 25, delay: 0.5, x: [0, 110, -210, 160, 0], y: [0, -210, 160, -120, 0] },
+    { left: "70%", top: "10%", duration: 30, delay: 1.5, x: [0, -190, 90, -160, 0], y: [0, 240, -110, 190, 0] },
+    { left: "85%", top: "45%", duration: 18, delay: 0.8, x: [0, -120, -180, 60, 0], y: [0, 160, -190, 110, 0] },
+    { left: "60%", top: "85%", duration: 24, delay: 2.5, x: [0, -230, 110, 190, 0], y: [0, -160, -190, 100, 0] },
+    { left: "25%", top: "50%", duration: 26, delay: 1.2, x: [0, 200, 110, -160, 0], y: [0, -120, 200, -160, 0] },
+    { left: "90%", top: "70%", duration: 22, delay: 0.3, x: [0, -210, -60, 110, 0], y: [0, -190, 110, 140, 0] },
+    { left: "40%", top: "40%", duration: 19, delay: 1.8, x: [0, 160, -110, 200, 0], y: [0, 210, -160, 110, 0] },
+    { left: "10%", top: "90%", duration: 27, delay: 0.6, x: [0, 260, 110, -120, 0], y: [0, -240, -110, 140, 0] },
+    { left: "55%", top: "30%", duration: 23, delay: 2.2, x: [0, -110, 200, -200, 0], y: [0, 160, 110, -210, 0] },
+    { left: "78%", top: "90%", duration: 21, delay: 0.9, x: [0, -160, -200, 100, 0], y: [0, -200, 100, -150, 0] },
+    { left: "35%", top: "75%", duration: 29, delay: 1.6, x: [0, 110, 200, -160, 0], y: [0, -160, -200, 100, 0] },
+    { left: "65%", top: "55%", duration: 17, delay: 2.8, x: [0, -200, 100, 160, 0], y: [0, 110, -210, 150, 0] },
+    { left: "20%", top: "35%", duration: 24, delay: 0.4, x: [0, 160, -210, 100, 0], y: [0, 200, 110, -200, 0] },
+    { left: "48%", top: "95%", duration: 26, delay: 1.3, x: [0, -110, 200, -160, 0], y: [0, -250, 100, -110, 0] },
+    { left: "92%", top: "25%", duration: 20, delay: 2.1, x: [0, -200, -100, 150, 0], y: [0, 200, 150, -110, 0] },
+    { left: "3%",  top: "55%", duration: 28, delay: 0.7, x: [0, 210, 150, -110, 0], y: [0, -110, 200, -160, 0] },
+    { left: "73%", top: "75%", duration: 22, delay: 1.9, x: [0, -160, 200, -110, 0], y: [0, -200, -110, 150, 0] },
+    { left: "8%",  top: "42%", duration: 21, delay: 0.2, x: [0, 130, -180, 90, 0],  y: [0, 220, -130, 170, 0] },
+    { left: "44%", top: "12%", duration: 25, delay: 1.1, x: [0, -140, 210, -100, 0], y: [0, 190, 130, -200, 0] },
+    { left: "62%", top: "38%", duration: 19, delay: 2.3, x: [0, 170, -120, 200, 0], y: [0, -140, 210, -100, 0] },
+    { left: "83%", top: "15%", duration: 27, delay: 0.9, x: [0, -190, 80, -150, 0], y: [0, 170, -200, 130, 0] },
+    { left: "17%", top: "62%", duration: 23, delay: 1.7, x: [0, 250, -90, 160, 0],  y: [0, -180, 210, -90, 0] },
+    { left: "53%", top: "78%", duration: 18, delay: 0.3, x: [0, -170, 140, -210, 0], y: [0, -130, -190, 110, 0] },
+    { left: "95%", top: "50%", duration: 30, delay: 2.6, x: [0, -220, -80, 130, 0], y: [0, 160, -210, 100, 0] },
+    { left: "38%", top: "88%", duration: 24, delay: 1.4, x: [0, 180, -130, 220, 0], y: [0, -170, -140, 120, 0] },
+    { left: "27%", top: "8%",  duration: 20, delay: 2.9, x: [0, -100, 230, -150, 0], y: [0, 200, 100, -220, 0] },
+    { left: "80%", top: "62%", duration: 26, delay: 0.5, x: [0, -230, 110, 180, 0], y: [0, 130, -200, 110, 0] },
+    { left: "12%", top: "15%", duration: 22, delay: 1.0, x: [0, 190, 80, -170, 0],  y: [0, -190, 150, -100, 0] },
+    { left: "57%", top: "47%", duration: 17, delay: 2.4, x: [0, -150, 200, -80, 0], y: [0, 230, -110, 180, 0] },
+    { left: "32%", top: "32%", duration: 29, delay: 0.8, x: [0, 210, -150, 100, 0], y: [0, -100, 230, -140, 0] },
+    { left: "68%", top: "22%", duration: 21, delay: 1.5, x: [0, -180, 120, -220, 0], y: [0, 200, -130, 170, 0] },
+    { left: "42%", top: "68%", duration: 25, delay: 3.1, x: [0, 130, -200, 170, 0], y: [0, -220, 90, -160, 0] },
+    { left: "88%", top: "82%", duration: 23, delay: 0.6, x: [0, -110, -190, 140, 0], y: [0, -150, 180, -110, 0] },
+    { left: "7%",  top: "28%", duration: 27, delay: 2.0, x: [0, 240, -100, 180, 0],  y: [0, 140, -220, 100, 0] },
+    { left: "76%", top: "48%", duration: 19, delay: 1.2, x: [0, -130, 180, -200, 0], y: [0, 190, -100, 210, 0] },
+    { left: "22%", top: "92%", duration: 28, delay: 0.4, x: [0, 200, 130, -160, 0],  y: [0, -200, -130, 110, 0] },
+    { left: "96%", top: "8%",  duration: 20, delay: 1.8, x: [0, -200, -90, 160, 0],  y: [0, 220, 100, -190, 0] },
   ];
 
   return (
@@ -252,40 +208,16 @@ function AnimatedBackground() {
       {dots.map((dot, index) => (
         <motion.div
           key={index}
-          className="bg-dot"
-          style={{
-            left: dot.left,
-            top: dot.top,
-            width: `${dot.size}px`,
-            height: `${dot.size}px`,
-          }}
-          animate={{
-            x: dot.x,
-            y: dot.y,
-            opacity: [0.4, 0.75, 0.5, 0.4],
-            scale: [1, 1.08, 0.96, 1],
-          }}
-          transition={{
-            duration: dot.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: dot.delay,
-          }}
-        />
-      ))}
-
-      {tinyDots.map((dot, index) => (
-        <motion.div
-          key={`tiny-${index}`}
           className="tiny-dot"
           style={{
             left: dot.left,
             top: dot.top,
           }}
           animate={{
-            opacity: [0.25, 1, 0.25],
-            scale: [1, 1.5, 1],
-            y: [0, -8, 0],
+            x: dot.x,
+            y: dot.y,
+            opacity: [0.3, 1, 0.5, 0.9, 0.3],
+            scale: [1, 1.5, 1, 1.3, 1],
           }}
           transition={{
             duration: dot.duration,
@@ -482,14 +414,15 @@ export default function App() {
                   <Linkedin className="icon-md" />
                 </a>
 
-                <a
-                  href="/SIMONE.PIETRAROIA.CV.pdf"
-                  download="SIMONE.PIETRAROIA.CV.pdf"
-                  aria-label="Download CV"
-                  className="icon-btn-text icon-btn-amber"
-                >
-                  CV
-                </a>
+               <a
+                href={simoneCv}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CV"
+                className="icon-btn-text icon-btn-amber"
+              >
+                CV
+              </a>
               </div>
 
               <div className="hero-stats">
@@ -774,8 +707,10 @@ export default function App() {
                   </a>
 
                   <a
-                    href="/SIMONE.PIETRAROIA.CV.pdf"
-                    download="SIMONE.PIETRAROIA.CV.pdf"
+                    href={simoneCv}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="Simone-Pietraroia-CV.pdf"
                     aria-label="Download CV"
                     className="icon-btn-text icon-btn-amber"
                   >
